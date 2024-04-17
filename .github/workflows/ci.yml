@@ -1,6 +1,8 @@
 name: Build & Push pyinstaller-alpine
 
 on:
+  # https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow
+  workflow_dispatch: {}
   push:
     branches:
       - "main"
