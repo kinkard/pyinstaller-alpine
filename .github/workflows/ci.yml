@@ -19,10 +19,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: https://github.com/pyinstaller/pyinstaller.git
           file: alpine.dockerfile
-          platforms: linux/arm64
+          platforms: linux/arm64,linux/amd64
           push: true
           tags: kinkard/pyinstaller-alpine:latest
